@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melinda Steel — Specialist în oțel</title>
+    
+    <!-- Google Fonts: Archivo, IBM Plex Sans, IBM Plex Sans Condensed -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&family=IBM+Plex+Sans+Condensed:wght@400;600;700&family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS beállítása CDN-en keresztül -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'ms-dark': '#283232',       // Antracit rece
+                        'ms-light': '#EFEFEF',      // Alb arhitectural
+                        'ms-gold': '#C89B43',       // Aur rafinat
+                        'ms-gold-dark': '#987037',  // Bronz forjat
+                        'ms-platinum': '#D6D9D9',
+                        'ms-gray': '#5A6464',
+                        'ms-black': '#0F1414',
+                    },
+                    fontFamily: {
+                        'archivo': ['Archivo', 'sans-serif'],
+                        'plex': ['"IBM Plex Sans"', 'sans-serif'],
+                        'plex-cond': ['"IBM Plex Sans Condensed"', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'gold-gradient': 'linear-gradient(135deg, #C89B43 0%, #987037 100%)',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Egyedi CSS a háttérmintázathoz és az animációkhoz -->
+    <style>
+        body {
+            font-family: 'IBM Plex Sans', sans-serif;
+            background-color: #EFEFEF;
+            color: #283232;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Archivo', sans-serif;
+        }
+
+        .btn-condensed {
+            font-family: 'IBM Plex Sans Condensed', sans-serif;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Háttér pattern a Brandbook 4.2 alapján */
+        .ms-pattern-bg {
+            background-color: #283232;
+            background-image: repeating-linear-gradient(
+                45deg,
+                rgba(255, 255, 255, 0.03) 0px,
+                rgba(255, 255, 255, 0.03) 10px,
+                transparent 10px,
+                transparent 20px
+            );
+        }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden">
+
+    <!-- Felső információs sáv -->
+    <div class="bg-ms-dark text-ms-platinum text-sm py-2">
+        <div class="container mx-auto px-4 md:px-8 flex justify-between items-center">
+            <div class="flex space-x-6">
+                <span class="flex items-center space-x-2">
+                    <svg class="w-4 h-4 text-ms-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                    <span>+40 266 217 280</span>
+                </span>
+                <span class="hidden md:flex items-center space-x-2">
+                    <svg class="w-4 h-4 text-ms-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    <span>info@melindasteel.ro</span>
+                </span>
+            </div>
+            <div class="flex space-x-4">
+                <a href="#" class="hover:text-ms-gold transition-colors">RO</a>
+                <span class="text-ms-gray">|</span>
+                <a href="#" class="text-ms-gold font-bold">HU</a>
+                <span class="text-ms-gray">|</span>
+                <a href="#" class="hover:text-ms-gold transition-colors">EN</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fő Navigáció -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 md:px-8 py-4 flex justify-between items-center">
+            
+            <!-- Képes Melinda Steel Logó Placeholder -->
+            <a href="#" class="flex items-center group">
+                <!-- Cseréld ki a src értékét a logód pontos elérési útjára -->
+                <img src="https://picsvg.com/svg/0IMPR.jpg" alt="Melinda Steel Logó" class="h-10 w-auto transform group-hover:scale-105 transition-transform" />
+            </a>
+
+            <!-- Menüpontok (Desktop) -->
+            <div class="hidden lg:flex space-x-6 xl:space-x-8 font-plex font-semibold text-ms-dark">
+                <a href="#" class="hover:text-ms-gold transition-colors">Rólunk</a>
+                <a href="#" class="hover:text-ms-gold transition-colors">Üzletágak</a>
+                <a href="#" class="hover:text-ms-gold transition-colors">Termékek</a>
+                <a href="#" class="hover:text-ms-gold transition-colors">Szolgáltatások</a>
+                <a href="#" class="hover:text-ms-gold transition-colors">Webáruház</a>
+                <a href="#" class="hover:text-ms-gold transition-colors">Hírek</a>
+                <a href="#" class="hover:text-ms-gold transition-colors">Kapcsolat</a>
+            </div>
+
+            <!-- CTA Gombok -->
+            <div class="hidden md:flex space-x-4 items-center">
+                <a href="#" class="btn-condensed text-ms-dark hover:text-ms-gold transition-colors">Kalkulátor</a>
+                <a href="#" class="btn-condensed bg-gold-gradient text-white px-5 py-2 rounded shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all">
+                    Rendelés online
+                </a>
+            </div>
+
+            <!-- Mobil Menü Gomb -->
+            <button class="lg:hidden text-ms-dark focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Fő Banner (Hero Section) -->
+    <header class="relative bg-ms-light overflow-hidden">
+        <div class="container mx-auto px-4 md:px-8 py-16 md:py-24 flex flex-col md:flex-row items-center">
+            
+            <div class="md:w-1/2 z-10 pr-0 md:pr-12 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-ms-dark leading-tight mb-6">
+                    Több mint 30 éve vagyunk a <span class="text-transparent bg-clip-text bg-gold-gradient">legmegfelelőbb alternatíva</span>
+                </h1>
+                <p class="text-lg md:text-xl font-plex text-ms-gray mb-8">
+                    a vastermékek, különleges acélok és a kapcsolódó ipari szolgáltatások szállításában.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#" class="btn-condensed bg-ms-dark text-white px-6 py-3 rounded shadow hover:bg-ms-gray transition-colors">Termékeink</a>
+                    <a href="#" class="btn-condensed border-2 border-ms-dark text-ms-dark px-6 py-3 rounded hover:bg-ms-dark hover:text-white transition-colors">Kapcsolat</a>
+                </div>
+            </div>
+
+            <!-- Képek (Reprezentatív) -->
+            <div class="md:w-1/2 relative min-h-[400px] w-full flex justify-end">
+                <div class="absolute top-0 right-10 w-3/4 h-64 bg-ms-platinum rounded shadow-lg overflow-hidden flex items-center justify-center border-4 border-white z-0">
+                    <span class="text-ms-gray font-plex">[Ipari épület Képe]</span>
+                </div>
+                <div class="absolute bottom-0 right-0 w-2/3 h-64 bg-ms-gray rounded shadow-2xl overflow-hidden flex items-center justify-center border-4 border-white z-10 transform translate-y-12 -translate-x-8">
+                    <span class="text-ms-light font-plex">[Gyártási folyamat Képe]</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Küldetés Szekció -->
+    <section class="ms-pattern-bg py-20 text-center px-4">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-sm font-plex-cond text-ms-gold tracking-[0.2em] uppercase mb-4">Küldetésünk</h2>
+            <p class="text-2xl md:text-4xl font-archivo font-semibold text-ms-light leading-snug">
+                "Mindig <span class="text-ms-gold">megbízható</span> és <span class="text-ms-gold">elérhető</span> partnerek lenni, akire biztosan számíthat."
+            </p>
+        </div>
+    </section>
+
+    <!-- Miért mi? Szekció -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 md:px-8">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-ms-dark mb-12 border-l-4 border-ms-gold pl-4">Miért mi?</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Kártya 1 -->
+                <div class="bg-ms-light p-8 rounded-lg hover:shadow-lg transition-shadow border-t-4 border-transparent hover:border-ms-gold">
+                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mb-6 shadow text-ms-gold">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 002-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold font-archivo text-ms-dark mb-3">Sokszínűség</h3>
+                    <p class="text-ms-gray font-plex">Széles termékkínálat és magas minőségű kapcsolódó szolgáltatások egy helyen.</p>
+                </div>
+
+                <!-- Kártya 2 -->
+                <div class="bg-ms-light p-8 rounded-lg hover:shadow-lg transition-shadow border-t-4 border-transparent hover:border-ms-gold">
+                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mb-6 shadow text-ms-gold">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold font-archivo text-ms-dark mb-3">Kapcsolat, NEM tranzakció</h3>
+                    <p class="text-ms-gray font-plex">Elkötelezettek vagyunk ügyfeleink felé, közel maradunk és mindig betartjuk ígéreteinket.</p>
+                </div>
+
+                <!-- Kártya 3 -->
+                <div class="bg-ms-light p-8 rounded-lg hover:shadow-lg transition-shadow border-t-4 border-transparent hover:border-ms-gold">
+                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mb-6 shadow text-ms-gold">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold font-archivo text-ms-dark mb-3">Integrátorok a projektben</h3>
+                    <p class="text-ms-gray font-plex">Operatív rugalmasság a legkiterjedtebb és legmegbízhatóbb országos raktárhálózaton keresztül.</p>
+                </div>
+
+                <!-- Kártya 4 -->
+                <div class="bg-ms-light p-8 rounded-lg hover:shadow-lg transition-shadow border-t-4 border-transparent hover:border-ms-gold">
+                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mb-6 shadow text-ms-gold">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold font-archivo text-ms-dark mb-3">Integrált megoldások</h3>
+                    <p class="text-ms-gray font-plex">Tervezés, debitálás, lézervágás, lemezhajlítás, hegesztés, lézergravírozás és profi vopsire (festés).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Üzletágak (Linii de Business) -->
+    <section class="py-20 bg-ms-light">
+        <div class="container mx-auto px-4 md:px-8">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-ms-dark mb-12 border-l-4 border-ms-gold pl-4">Üzletágaink</h2>
+            
+            <div class="flex flex-col lg:flex-row gap-8">
+                
+                <!-- B2B E-Store -->
+                <div class="flex-1 bg-white border border-ms-platinum rounded-lg overflow-hidden shadow hover:shadow-xl transition-shadow flex flex-col">
+                    <div class="h-48 bg-ms-dark relative flex items-center justify-center border-b-4 border-ms-gold">
+                        <div class="text-ms-light text-center font-archivo">
+                            <span class="text-3xl font-extrabold block mb-1">E-Store</span>
+                            <span class="text-lg font-bold text-ms-gold">B2B</span>
+                        </div>
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <h3 class="text-2xl font-bold text-ms-dark font-archivo mb-4">Comandă online!</h3>
+                        <p class="text-ms-gray font-plex mb-8 flex-1">
+                            Platforma de achiziții online a produselor din oțel, dedicată partenerilor B2B. Acéltermékek online beszerzési platformja a gyors és hatékony ügyintézésért.
+                        </p>
+                        <a href="#" class="btn-condensed self-start bg-gold-gradient text-white px-6 py-2 rounded">Irány a Webáruház</a>
+                    </div>
+                </div>
+
+                <!-- Engineering & Production -->
+                <div class="flex-1 bg-white border border-ms-platinum rounded-lg overflow-hidden shadow hover:shadow-xl transition-shadow flex flex-col">
+                    <div class="h-48 bg-ms-dark relative flex items-center justify-center border-b-4 border-ms-gray">
+                        <div class="text-ms-light text-center font-archivo">
+                            <span class="text-3xl font-extrabold block mb-1">Engineering &</span>
+                            <span class="text-3xl font-extrabold text-ms-platinum">Production</span>
+                        </div>
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <h3 class="text-2xl font-bold text-ms-dark font-archivo mb-4">Gyártás és Tervezés</h3>
+                        <p class="text-ms-gray font-plex mb-8 flex-1">
+                            Soluții integrate în procesul de fabricație pentru companiile din domeniul prelucrării metalelor de mare volum şi precizie.
+                        </p>
+                        <a href="#" class="btn-condensed self-start bg-ms-dark text-white px-6 py-2 rounded hover:bg-ms-gray">Szolgáltatások megtekintése</a>
+                    </div>
+                </div>
+
+                <!-- Regional Store -->
+                <div class="flex-1 bg-white border border-ms-platinum rounded-lg overflow-hidden shadow hover:shadow-xl transition-shadow flex flex-col">
+                    <div class="h-48 bg-ms-dark relative flex items-center justify-center border-b-4 border-ms-gold">
+                        <div class="text-ms-light text-center font-archivo">
+                            <span class="text-3xl font-extrabold block mb-1">Regional</span>
+                            <span class="text-2xl font-bold text-ms-gold">Store</span>
+                        </div>
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <h3 class="text-2xl font-bold text-ms-dark font-archivo mb-4">Országos Lefedettség</h3>
+                        <p class="text-ms-gray font-plex mb-8 flex-1">
+                            Acoperire națională cu 8 puncte de lucru: Bacău, Baia Mare, Brașov, București, Craiova, Odorheiu Secuiesc, Oradea, Târgu Mureș, Timișoara. Személyes tanácsadás.
+                        </p>
+                        <a href="#" class="btn-condensed self-start border-2 border-ms-dark text-ms-dark px-6 py-2 rounded hover:bg-ms-dark hover:text-white transition-colors">Térkép mutatása</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Rólunk mondták (Videós Tesztimoniálok) -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 md:px-8">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-ms-dark mb-12 text-center">Rólunk mondták</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="relative bg-ms-platinum aspect-video rounded-lg flex items-center justify-center group cursor-pointer overflow-hidden shadow">
+                    <div class="absolute inset-0 bg-ms-dark opacity-20 group-hover:opacity-40 transition-opacity"></div>
+                    <svg class="w-16 h-16 text-white z-10 opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all drop-shadow-lg" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path></svg>
+                    <span class="absolute bottom-4 left-4 text-white font-archivo font-bold drop-shadow-md">[Ügyfél videó 1 Képe]</span>
+                </div>
+                <div class="relative bg-ms-platinum aspect-video rounded-lg flex items-center justify-center group cursor-pointer overflow-hidden shadow">
+                    <div class="absolute inset-0 bg-ms-dark opacity-20 group-hover:opacity-40 transition-opacity"></div>
+                    <svg class="w-16 h-16 text-white z-10 opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all drop-shadow-lg" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path></svg>
+                    <span class="absolute bottom-4 left-4 text-white font-archivo font-bold drop-shadow-md">[Ügyfél videó 2 Képe]</span>
+                </div>
+                <div class="relative bg-ms-platinum aspect-video rounded-lg flex items-center justify-center group cursor-pointer overflow-hidden shadow">
+                    <div class="absolute inset-0 bg-ms-dark opacity-20 group-hover:opacity-40 transition-opacity"></div>
+                    <svg class="w-16 h-16 text-white z-10 opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all drop-shadow-lg" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path></svg>
+                    <span class="absolute bottom-4 left-4 text-white font-archivo font-bold drop-shadow-md">[Ügyfél videó 3 Képe]</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-ms-dark pt-16 pb-8 border-t-4 border-ms-gold">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                
+                <!-- Brand Info -->
+                <div>
+                    <!-- Képes Logo Placeholder (Fehér verzió a sötét háttérhez) -->
+                    <a href="#" class="flex items-center mb-6">
+                        <!-- Cseréld ki a src értékét a negatív/fehér logód pontos elérési útjára -->
+                        <img src="logo-white.png" alt="Melinda Steel Logó" class="h-10 w-auto" />
+                    </a>
+                    <p class="text-ms-platinum font-plex mb-6 text-sm">
+                        De peste 30 de ani suntem cea mai potrivită alternativă pentru furnizarea produselor feroase și a serviciilor conexe.
+                    </p>
+                    <div class="flex space-x-4">
+                        <!-- Közösségi média placeholder ikonok -->
+                        <a href="#" class="w-10 h-10 rounded bg-ms-gray flex items-center justify-center text-white hover:bg-ms-gold transition-colors">FB</a>
+                        <a href="#" class="w-10 h-10 rounded bg-ms-gray flex items-center justify-center text-white hover:bg-ms-gold transition-colors">IN</a>
+                        <a href="#" class="w-10 h-10 rounded bg-ms-gray flex items-center justify-center text-white hover:bg-ms-gold transition-colors">YT</a>
+                    </div>
+                </div>
+
+                <!-- Linkek 1 -->
+                <div>
+                    <h4 class="text-white font-archivo font-bold text-lg mb-4">Navigáció</h4>
+                    <ul class="space-y-2 text-ms-platinum font-plex text-sm">
+                        <li><a href="#" class="hover:text-ms-gold transition-colors">Rólunk</a></li>
+                        <li><a href="#" class="hover:text-ms-gold transition-colors">Üzletágak</a></li>
+                        <li><a href="#" class="hover:text-ms-gold transition-colors">Termékek és Szolgáltatások</a></li>
+                        <li><a href="#" class="hover:text-ms-gold transition-colors">B2B E-Store</a></li>
+                        <li><a href="#" class="hover:text-ms-gold transition-colors">Regionális Hálózat</a></li>
+                        <li><a href="#" class="hover:text-ms-gold transition-colors">Hírek és Események</a></li>
+                    </ul>
+                </div>
+
+                <!-- Linkek 2 (Jogi) -->
+                <div>
+                    <h4 class="text-white font-archivo font-bold text-lg mb-4">Hasznos linkek</h4>
+                    <ul class="space-y-2 text-ms-platinum font-plex text-sm">
+                        <li><a href="#" class="hover:text-ms-gold transition-colors">Általános Szerződési Feltételek</a></li>
+                        <li><a href="#" class="hover:text-ms-gold transition-colors">Adatvédelmi irányelvek (GDPR)</a></li>
+                        <li><a href="#" class="hover:text-ms-gold transition-colors">Süti (Cookie) szabályzat</a></li>
+                        <li><a href="#" class="hover:text-ms-gold transition-colors">Panaszkezelés</a></li>
+                        <li><a href="#" class="hover:text-ms-gold transition-colors">ANPC</a></li>
+                    </ul>
+                </div>
+
+                <!-- Kapcsolat -->
+                <div>
+                    <h4 class="text-white font-archivo font-bold text-lg mb-4">Kapcsolat</h4>
+                    <ul class="space-y-3 text-ms-platinum font-plex text-sm">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-ms-gold mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            <span>Odorheiu Secuiesc,<br>Harghita, Romania</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-ms-gold mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            <span>+40 266 217 280</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-ms-gold mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            <span>szasz.arthur@melinda.ro</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-ms-gray pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-ms-gray font-plex text-xs mb-4 md:mb-0">
+                    © 2026 Melinda Steel. Minden jog fenntartva.
+                </p>
+                <div class="flex items-center space-x-2 text-ms-gray text-xs">
+                    <span>Készítette: minic studio & Integrált Csapat</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
